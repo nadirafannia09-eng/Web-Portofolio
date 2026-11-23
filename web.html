@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Portfolio — UI/UX Designer (Feminine Retro Modern Editorial)</title>
+  
+  <!-- Google Fonts: Fraunces (Retro Serif), Titan One (Chunky Display), Plus Jakarta Sans (Clean UI Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frafances:opsz,wght@9..144,800;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Titan+One&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
+  
+  <!-- Hubungkan CSS Terpisah -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Isi Portfolio -->
+
+  <!-- Hubungkan JavaScript -->
+  <script src="web.js"></script>
+</body>
+</html>
+
+  <!-- =========================================================
+       FLOATING HEADER & NAVIGATION (Responsif Desktop & Mobile)
+       ========================================================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Brand Logo -->
+      <a href="#slide-1" class="brand-logo" onclick="goToSlide(0)">
+        <span class="brand-dot"></span>
+        <span class="brand-name" id="navBrandText">CLARA EVANGELIN</span>
+      </a>
+
+      <!-- Quick Links (Tampil di Desktop) -->
+      <nav class="desktop-nav">
+        <a href="#slide-2" onclick="goToSlide(1)">Daftar Isi</a>
+        <a href="#slide-3" onclick="goToSlide(2)">Tentang</a>
+        <a href="#slide-4" onclick="goToSlide(3)">Pengalaman</a>
+        <a href="#slide-5" onclick="goToSlide(4)">Keahlian</a>
+        <a href="#slide-6" onclick="goToSlide(5)">Karya</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button class="btn-action btn-edit" onclick="toggleCustomizeDrawer()">
+          <span>✎ Edit Profil</span>
+        </button>
+        <button class="btn-action btn-mode" id="modeToggleBtn" onclick="toggleViewMode()">
+          <span id="modeIcon">◫</span>
+          <span id="modeText">Mode Slide</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       MAIN CONTAINER (10 Bagian / Slide Sesuai Referensi)
+       ========================================================= -->
+  <main class="portfolio-container" id="portfolioContainer">
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 1: COVER / HERO (Soft Mint #D6E6E5)
+         --------------------------------------------------------- -->
+    <section id="slide-1" class="portfolio-slide active-slide slide-cover">
+      <div class="slide-container">
+        <div class="cover-top-info">
+          <span>EDISI PORTOFOLIO 2026</span>
+          <span>UI/UX & PRODUCT DESIGN</span>
+        </div>
+
+        <div class="cover-hero-content">
+          <h1 class="chunky-title">CREATIVE</h1>
+          <div class="hero-pill-badge">
+            <span id="heroBadgeText">BY CLARA EVANGELIN — UI/UX DESIGNER</span>
+          </div>
+          <h1 class="chunky-title">PORTFOLIO</h1>
+        </div>
+
+        <div class="cover-bottom-info">
+          <span>JAKARTA • REMOTE WORLDWIDE</span>
+          <a href="#slide-2" class="domain-link" id="websiteDomainText" onclick="goToSlide(1)">CLARAEVANGELIN.DESIGN ↓</a>
+          <span>SELECTED CASE STUDIES</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 2: TABLE OF CONTENTS (Deep Espresso #4A3828)
+         --------------------------------------------------------- -->
+    <section id="slide-2" class="portfolio-slide slide-toc">
+      <div class="slide-container toc-grid">
+        <div class="toc-left">
+          <span class="section-tag mint-tag">NAVIGASI EDITORIAL</span>
+          <h2 class="chunky-title light-text">TABLE OF<br>CONTENTS</h2>
+          <p class="toc-desc">Kumpulan eksplorasi desain antarmuka, riset pengalaman pengguna, dan sistem visual dengan estetika editorial modern.</p>
+        </div>
+
+        <div class="toc-right">
+          <a href="#slide-3" class="toc-item" onclick="goToSlide(2)">
+            <div class="toc-item-left">
+              <span class="toc-num">01</span>
+              <span class="toc-title">About Me</span>
+            </div>
+            <span class="toc-arrow">Tentang Saya →</span>
+          </a>
+          <a href="#slide-4" class="toc-item" onclick="goToSlide(3)">
+            <div class="toc-item-left">
+              <span class="toc-num">02</span>
+              <span class="toc-title">Experience</span>
+            </div>
+            <span class="toc-arrow">Pengalaman →</span>
+          </a>
+          <a href="#slide-5" class="toc-item" onclick="goToSlide(4)">
+            <div class="toc-item-left">
+              <span class="toc-num">03</span>
+              <span class="toc-title">My Skills</span>
+            </div>
+            <span class="toc-arrow">Keahlian →</span>
+          </a>
+          <a href="#slide-6" class="toc-item" onclick="goToSlide(5)">
+            <div class="toc-item-left">
+              <span class="toc-num">04</span>
+              <span class="toc-title">Sample Works</span>
+            </div>
+            <span class="toc-arrow">Studi Kasus →</span>
+          </a>
+          <a href="#slide-10" class="toc-item" onclick="goToSlide(9)">
+            <div class="toc-item-left">
+              <span class="toc-num">05</span>
+              <span class="toc-title">Let's Collaborate</span>
+            </div>
+            <span class="toc-arrow">Kontak →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 3: ABOUT ME (Warm Cream #F3EED4)
+         --------------------------------------------------------- -->
+    <section id="slide-3" class="portfolio-slide slide-about">
+      <div class="slide-container about-grid">
+        <div class="about-image-wrapper">
+          <div class="polaroid-card">
+            <div class="polaroid-img-box">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Foto Profil UI/UX Designer" onerror="this.onerror=null;this.src='https://placehold.co/600x750/D6E6E5/4A3828?text=Clara+Evangelin';">
+              <div class="polaroid-tag">✦ 4+ Tahun Pengalaman</div>
+            </div>
+            <div class="polaroid-footer">
+              <div>
+                <p class="profile-name-text" id="fullNameCard">Clara Evangelin</p>
+                <p class="profile-role-text" id="roleCard">Senior UI/UX & Product Designer</p>
+              </div>
+              <span class="lang-badge">ID</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag espresso-tag">01 — TENTANG SAYA</span>
+          <h2 class="chunky-title" id="aboutGreeting">Hello,<br>I'm Clara!</h2>
+          <div class="about-text-group">
+            <p id="bioParagraph1">Saya seorang <strong>UI/UX Designer</strong> yang berfokus menciptakan pengalaman digital yang intuitif, hangat, dan berkesan. Karya saya menjembatani riset pengguna mendalam, arsitektur informasi yang rapi, serta arah visual editorial yang berkarakter.</p>
+            <p id="bioParagraph2">Digerakkan oleh rasa ingin tahu terhadap perilaku manusia, saya senang menyederhanakan alur produk yang kompleks menjadi antarmuka yang terasa natural.</p>
+          </div>
+          <div class="badge-pills-row">
+            <span class="pill-badge">Human-Centered Design</span>
+            <span class="pill-badge">Design Systems</span>
+            <span class="pill-badge">Editorial Visuals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 4: EXPERIENCE (Soft Mint #D6E6E5)
+         --------------------------------------------------------- -->
+    <section id="slide-4" class="portfolio-slide slide-experience">
+      <div class="slide-container">
+        <div class="section-heading-center">
+          <span class="section-tag white-tag">02 — PERJALANAN KARIER</span>
+          <h2 class="chunky-title">Experience</h2>
+        </div>
+
+        <div class="exp-grid-3">
+          <!-- Kartu Pengalaman 1 -->
+          <article class="exp-card">
+            <div class="exp-card-pin"></div>
+            <div class="exp-card-img">
+              <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=500&q=80" alt="Product Design Workspace" onerror="this.onerror=null;this.src='https://placehold.co/300x300/F3EED4/4A3828?text=UX+Lead';">
+            </div>
+            <div class="exp-card-badge">PRODUCT DESIGNER</div>
+            <p class="exp-company-sub">Karsa Digital Studio • 2024 – Sekarang</p>
+            <p class="exp-desc">Memimpin perancangan end-to-end aplikasi fintech & gaya hidup, meningkatkan retensi pengguna baru sebesar 34%.</p>
+          </article>
+
+          <!-- Kartu Pengalaman 2 -->
+          <article class="exp-card">
+            <div class="exp-card-pin"></div>
+            <div class="exp-card-img">
+              <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=500&q=80" alt="Wireframing" onerror="this.onerror=null;this.src='https://placehold.co/300x300/F3EED4/4A3828?text=UI+UX';">
+            </div>
+            <div class="exp-card-badge">UI/UX DESIGNER</div>
+            <p class="exp-company-sub">Ruang Kreatif Nusantara • 2022 – 2024</p>
+            <p class="exp-desc">Merancang wireframe interaktif, prototipe high-fidelity, serta melakukan pengujian usability mingguan untuk 12+ klien.</p>
+          </article>
+
+          <!-- Kartu Pengalaman 3 -->
+          <article class="exp-card">
+            <div class="exp-card-pin"></div>
+            <div class="exp-card-img">
+              <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=500&q=80" alt="Design Systems" onerror="this.onerror=null;this.src='https://placehold.co/300x300/F3EED4/4A3828?text=Systems';">
+            </div>
+            <div class="exp-card-badge">DESIGN SYSTEM LEAD</div>
+            <p class="exp-company-sub">Loka Tech Indonesia • 2021 – 2022</p>
+            <p class="exp-desc">Membangun dokumentasi komponen Figma dan token desain terstandarisasi yang mempercepat kolaborasi tim hingga 40%.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 5: MY SKILLS (Warm Cream #F3EED4)
+         --------------------------------------------------------- -->
+    <section id="slide-5" class="portfolio-slide slide-skills">
+      <div class="slide-container">
+        <div class="skills-header-row">
+          <div class="skills-mini-thumb rotate-left">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=300&q=80" alt="Thumbnail UI" onerror="this.onerror=null;this.src='https://placehold.co/150x150/D6E6E5/4A3828?text=UI';">
+          </div>
+          <div class="section-heading-center no-margin">
+            <span class="section-tag mint-tag">03 — KOMPETENSI UTAMA</span>
+            <h2 class="chunky-title">My Skills</h2>
+          </div>
+          <div class="skills-mini-thumb rotate-right">
+            <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=300&q=80" alt="Thumbnail UX" onerror="this.onerror=null;this.src='https://placehold.co/150x150/D6E6E5/4A3828?text=UX';">
+          </div>
+        </div>
+
+        <div class="skills-grid-2">
+          <!-- Hard Skills -->
+          <div class="skill-box">
+            <div class="skill-box-title-wrap">
+              <span class="skill-category-badge">HARD SKILLS</span>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>User Research & Testing:</strong> Wawancara mendalam, persona pengguna, usability testing, dan heuristic evaluation.</div>
+              </li>
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Wireframing & Prototyping:</strong> Alur informasi, low-to-high fidelity prototype interaktif di Figma & Framer.</div>
+              </li>
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Design Systems & Tokens:</strong> Pustaka komponen modular, variabel multi-tema, serta panduan aksesibilitas WCAG.</div>
+              </li>
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Interaction & Visual Direction:</strong> Micro-interactions, tipografi editorial, dan arah seni digital yang kohesif.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-box">
+            <div class="skill-box-title-wrap">
+              <span class="skill-category-badge">SOFT SKILLS</span>
+            </div>
+            <ul class="skill-list">
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Design Thinking:</strong> Menerjemahkan kebutuhan bisnis yang kompleks menjadi solusi visual yang intuitif.</div>
+              </li>
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Stakeholder Storytelling:</strong> Mempresentasikan keputusan desain secara persuasif berbasis data riset.</div>
+              </li>
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Cross-Functional Collaboration:</strong> Bekerja selaras bersama Product Manager dan Engineer dari ideasi ke handoff.</div>
+              </li>
+              <li>
+                <span class="skill-bullet"></span>
+                <div><strong>Empathy-Driven Problem Solving:</strong> Kepekaan tinggi terhadap konteks emosional dan kemudahan akses pengguna.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 6: SAMPLE WORKS DIVIDER (Deep Espresso #4A3828)
+         --------------------------------------------------------- -->
+    <section id="slide-6" class="portfolio-slide slide-works-divider">
+      <div class="slide-container text-center">
+        <span class="section-tag mint-tag">04 — STUDI KASUS PILIHAN</span>
+        <h2 class="chunky-title light-text">SAMPLE<br>WORKS</h2>
+        <p class="works-divider-desc">Eksplorasi proyek desain UI/UX pilihan—klik tombol studi kasus untuk melihat detail riset, wireframe, dan sistem desain.</p>
+        <div class="works-quick-links">
+          <a href="#slide-7" class="btn-work-pill" onclick="goToSlide(6)">01. Velvet Bloom</a>
+          <a href="#slide-8" class="btn-work-pill outline-pill" onclick="goToSlide(7)">02. Kala Journal</a>
+          <a href="#slide-9" class="btn-work-pill outline-pill" onclick="goToSlide(8)">03. Aroma Bakery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 7: PROJECT 1 — Velvet Bloom (Warm Cream #F3EED4)
+         --------------------------------------------------------- -->
+    <section id="slide-7" class="portfolio-slide slide-project">
+      <div class="slide-container project-split-grid">
+        <!-- 3x3 Grid Referensi -->
+        <div class="project-9box-grid">
+          <div class="box-item mint-bg">
+            <div class="box-top-row"><span>●</span><small>9:41</small></div>
+            <div class="box-mini-card"><strong>Velvet Bloom</strong><small>Botanical Care</small></div>
+            <div class="box-line"></div>
+          </div>
+          <div class="box-item img-box">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="UI 1" onerror="this.onerror=null;this.src='https://placehold.co/300x300/D6E6E5/4A3828?text=UI+1';">
+          </div>
+          <div class="box-item espresso-bg">
+            <small class="mint-text">TOKENS</small>
+            <div class="swatch-row"><span class="swatch mint"></span><span class="swatch cream"></span><span class="swatch terracotta"></span></div>
+            <small class="light-text">#4A3828 • #D6E6E5</small>
+          </div>
+          <div class="box-item cream-bg center-text">
+            <span class="serif-giant">Aa</span>
+            <small>Fraunces + Sans</small>
+          </div>
+          <div class="box-item img-box relative">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Hero" onerror="this.onerror=null;this.src='https://placehold.co/300x300/F3EED4/4A3828?text=App';">
+            <span class="absolute-pill">SHOP NOW</span>
+          </div>
+          <div class="box-item mint-dark-bg flex-col-gap">
+            <div class="mini-btn">✓ Skin Quiz</div>
+            <div class="mini-btn espresso-btn">+ Keranjang</div>
+            <div class="mini-btn">★ 4.9 Rating</div>
+          </div>
+          <div class="box-item img-box">
+            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=400&q=80" alt="Packaging" onerror="this.onerror=null;this.src='https://placehold.co/300x300/D6E6E5/4A3828?text=UX';">
+          </div>
+          <div class="box-item cream-bg flex-col-gap">
+            <small>CHECKOUT</small>
+            <div class="box-line-short"></div>
+            <strong>Rp 245.000</strong>
+          </div>
+          <div class="box-item img-box">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="User" onerror="this.onerror=null;this.src='https://placehold.co/300x300/F3EED4/4A3828?text=User';">
+          </div>
+        </div>
+
+        <!-- Deskripsi Proyek 1 -->
+        <div class="project-desc-col">
+          <span class="section-tag mint-tag">MOBILE APP • E-COMMERCE UI/UX</span>
+          <h2 class="chunky-title">Project 1</h2>
+          <h3 class="project-subtitle">Velvet Bloom — Aplikasi Belanja Perawatan Kulit Botanikal</h3>
+          <p class="project-body-text">Perancangan ulang pengalaman belanja mobile untuk brand perawatan kulit lokal dengan pendekatan editorial yang hangat. Fitur <em>Personal Skin Quiz</em> interaktif membantu pengguna menemukan rangkaian produk yang tepat, mengurangi cart drop-off hingga 28%.</p>
+          <div class="project-footer-row">
+            <button class="btn-case-study" onclick="openCaseStudy(0)">
+              <span>Lihat Case Study Lengkap</span>
+              <span>↗</span>
+            </button>
+            <span class="role-caption">Role: Lead UI/UX Designer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 8: PROJECT 2 — Kala Journal (Soft Mint #D6E6E5)
+         --------------------------------------------------------- -->
+    <section id="slide-8" class="portfolio-slide slide-project">
+      <div class="slide-container project-split-grid reverse-grid">
+        <!-- Deskripsi Proyek 2 -->
+        <div class="project-desc-col">
+          <span class="section-tag cream-tag">WEB & MOBILE • WELLNESS UX</span>
+          <h2 class="chunky-title">Project 2</h2>
+          <h3 class="project-subtitle">Kala — Jurnal Refleksi Harian & Pelacak Suasana Hati</h3>
+          <p class="project-body-text">Aplikasi jurnal digital berpalet kuning hangat dan tipografi ekspresif yang dirancang untuk membantu pekerja kreatif mencatat emosi harian tanpa tekanan. Dilengkapi visualisasi tren suasana hati mingguan.</p>
+          <div class="project-footer-row">
+            <button class="btn-case-study" onclick="openCaseStudy(1)">
+              <span>Lihat Case Study Lengkap</span>
+              <span>↗</span>
+            </button>
+            <span class="role-caption">Role: Product Designer</span>
+          </div>
+        </div>
+
+        <!-- 2x2 Grid Referensi -->
+        <div class="project-4box-grid">
+          <div class="box-4item gold-bg">
+            <div class="box-top-row"><span class="badge-tag">MOOD TRACKER</span><small>Nov 2026</small></div>
+            <p class="serif-title-md">Bagaimana perasaanmu hari ini?</p>
+            <div class="tag-row"><span class="pill-tag dark">☀ Tenang</span><span class="pill-tag light">✦ Fokus</span></div>
+          </div>
+          <div class="box-4item img-box relative">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80" alt="Journaling" onerror="this.onerror=null;this.src='https://placehold.co/400x300/E2B93B/4A3828?text=Journaling';">
+            <span class="absolute-pill">14 Hari Streak</span>
+          </div>
+          <div class="box-4item img-box">
+            <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=600&q=80" alt="Sketch" onerror="this.onerror=null;this.src='https://placehold.co/400x300/F3EED4/4A3828?text=Sketch';">
+          </div>
+          <div class="box-4item espresso-bg flex-col-gap">
+            <div class="box-top-row"><small class="gold-text">INSIGHT MINGGUAN</small><span class="dot-gold"></span></div>
+            <div class="mini-bar-chart">
+              <span style="height: 50%;"></span>
+              <span style="height: 80%;"></span>
+              <span style="height: 100%;"></span>
+              <span style="height: 60%;"></span>
+              <span style="height: 90%;"></span>
+            </div>
+            <small class="light-text">86% pengguna menulis rutin di pagi hari.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 9: PROJECT 3 — Aroma Bakery (Warm Cream #F3EED4)
+         --------------------------------------------------------- -->
+    <section id="slide-9" class="portfolio-slide slide-project">
+      <div class="slide-container text-center">
+        <span class="section-tag mint-tag">TABLET POS & ORDERING • HOSPITALITY UX</span>
+        <h2 class="chunky-title">Project 3</h2>
+
+        <!-- Triptych 3 Kartu (Sesuai Referensi) -->
+        <div class="triptych-grid-3">
+          <div class="triptych-card">
+            <div class="triptych-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80" alt="Menu" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4A3828/F3EED4?text=Menu+UI';">
+              <span class="badge-absolute">01 • Katalog Menu</span>
+            </div>
+            <h4>Visual Menu & Kustomisasi</h4>
+            <p>Pemilihan tingkat sangrai kopi dan varian pastry dalam satu ketukan.</p>
+          </div>
+
+          <div class="triptych-card">
+            <div class="triptych-img-wrap">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80" alt="POS" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4A3828/F3EED4?text=POS+System';">
+              <span class="badge-absolute">02 • Quick Checkout</span>
+            </div>
+            <h4>Integrasi Meja & QR Order</h4>
+            <p>Memangkas waktu antrean kasir pada jam sibuk pagi hingga 45%.</p>
+          </div>
+
+          <div class="triptych-card">
+            <div class="triptych-img-wrap">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=500&q=80" alt="Loyalty" onerror="this.onerror=null;this.src='https://placehold.co/400x300/4A3828/F3EED4?text=Loyalty';">
+              <span class="badge-absolute">03 • Loyalty Stamp</span>
+            </div>
+            <h4>Kartu Stempel Digital Retro</h4>
+            <p>Pengalaman klaim hadiah kopi gratis dengan animasi stempel klasik.</p>
+          </div>
+        </div>
+
+        <p class="project-center-desc"><strong>Aroma Artisan Coffee & Bakery</strong> — Sistem pemesanan meja dan kasir tablet yang memadukan kehangatan kafe klasik Eropa dengan efisiensi antarmuka sentuh modern.</p>
+
+        <button class="btn-case-study center-margin" onclick="openCaseStudy(2)">
+          <span>Lihat Case Study Lengkap</span>
+          <span>↗</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------
+         BAGIAN 10: CLOSING / CONTACT (Deep Espresso #4A3828)
+         --------------------------------------------------------- -->
+    <section id="slide-10" class="portfolio-slide slide-contact">
+      <div class="slide-container contact-inner-layout">
+        <div>
+          <span class="section-tag mint-tag">05 — TERBUKA UNTUK KOLABORASI & FREELANCE</span>
+          <h2 class="chunky-title light-text">LET'S<br>WORK<br>TOGETHER?</h2>
+
+          <div class="contact-action-row">
+            <button class="btn-copy-email" onclick="copyEmailAddress()">
+              <span id="emailDisplayText">HELLO@CLARAEVANGELIN.DESIGN</span>
+              <span class="copy-pill-btn">SALIN EMAIL</span>
+            </button>
+            <span id="copyToast" class="copy-toast hidden">✓ Alamat email berhasil disalin!</span>
+          </div>
+        </div>
+
+        <div class="contact-footer-bar">
+          <div>
+            <p class="footer-brand-title" id="footerName">CLARA EVANGELIN — UI/UX DESIGNER</p>
+            <p>Dirancang dengan gaya Feminine Retro Modern Editorial.</p>
+          </div>
+          <div class="footer-social-links">
+            <a href="#slide-1" onclick="goToSlide(0)">Dribbble ↗</a>
+            <a href="#slide-1" onclick="goToSlide(0)">Behance ↗</a>
+            <a href="#slide-1" onclick="goToSlide(0)">LinkedIn ↗</a>
+            <a href="#slide-1" onclick="goToSlide(0)">Instagram ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FLOATING SLIDE DECK CONTROLLER (Aktif saat Mode Slide)
+       ========================================================= -->
+  <div id="deckControls" class="deck-controls hidden">
+    <button class="deck-arrow-btn" onclick="prevSlide()" title="Slide Sebelumnya">←</button>
+    <div class="deck-counter-text">SLIDE <span id="currentSlideNum">01</span> / 10</div>
+    <button class="deck-arrow-btn" onclick="nextSlide()" title="Slide Berikutnya">→</button>
+  </div>
+
+  <!-- =========================================================
+       MODAL DETAIL STUDI KASUS
+       ========================================================= -->
+  <div id="caseStudyModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeCaseStudy()">✕</button>
+      <span id="modalTag" class="section-tag mint-tag">CASE STUDY</span>
+      <h3 id="modalTitle" class="chunky-title modal-title-custom">Project Title</h3>
+      <p id="modalSubtitle" class="modal-subtitle-custom">Subtitle</p>
+
+      <div id="modalMetrics" class="modal-metrics-grid"></div>
+
+      <div class="modal-steps-group">
+        <div class="modal-step-box cream-step">
+          <h4>01. Tantangan & Riset Pengguna</h4>
+          <p id="modalProblem">Deskripsi masalah.</p>
+        </div>
+        <div class="modal-step-box mint-step">
+          <h4>02. Solusi Desain & Sistem Visual</h4>
+          <p id="modalSolution">Deskripsi solusi.</p>
+        </div>
+        <div class="modal-step-box white-step">
+          <h4>03. Dampak & Hasil Pengujian</h4>
+          <p id="modalImpact">Deskripsi hasil.</p>
+        </div>
+      </div>
+
+      <div class="modal-footer-row">
+        <button class="btn-action btn-mode" onclick="closeCaseStudy()">Tutup Preview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       DRAWER KUSTOMISASI PROFIL (Live Editor)
+       ========================================================= -->
+  <div id="customizeDrawer" class="drawer-overlay hidden">
+    <div class="drawer-box">
+      <div>
+        <div class="drawer-header">
+          <div>
+            <small class="drawer-eyebrow">LIVE MOCKUP EDITOR</small>
+            <h3 class="chunky-title drawer-title-custom">Kustomisasi Profil</h3>
+          </div>
+          <button class="drawer-close-btn" onclick="toggleCustomizeDrawer()">✕</button>
+        </div>
+        <p class="drawer-desc">Ubah nama, spesialisasi, dan email untuk melihat pratinjau langsung pada seluruh slide portofolio.</p>
+
+        <div class="drawer-form-group">
+          <div>
+            <label>Nama Lengkap Desainer</label>
+            <input id="inputName" type="text" value="Clara Evangelin" oninput="updateProfileData()">
+          </div>
+          <div>
+            <label>Nama Panggilan (Untuk "Hello, I'm ...")</label>
+            <input id="inputFirstName" type="text" value="Clara" oninput="updateProfileData()">
+          </div>
+          <div>
+            <label>Role / Gelar Spesialisasi</label>
+            <input id="inputRole" type="text" value="UI/UX DESIGNER" oninput="updateProfileData()">
+          </div>
+          <div>
+            <label>Email Kontak</label>
+            <input id="inputEmail" type="text" value="HELLO@CLARAEVANGELIN.DESIGN" oninput="updateProfileData()">
+          </div>
+          <div>
+            <label>Bio Singkat (Tentang Saya)</label>
+            <textarea id="inputBio" rows="4" oninput="updateProfileData()">Saya seorang UI/UX Designer yang berfokus menciptakan pengalaman digital yang intuitif, hangat, dan berkesan. Karya saya menjembatani riset pengguna mendalam, arsitektur informasi yang rapi, serta arah visual editorial yang berkarakter.</textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <button class="btn-drawer-sec" onclick="resetProfileData()">Reset Default</button>
+        <button class="btn-drawer-pri" onclick="toggleCustomizeDrawer()">Selesai</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hubungkan JavaScript Terpisah -->
+  <script src="script.js"></script>
+</body>
+</html>
